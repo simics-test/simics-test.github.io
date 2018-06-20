@@ -8,11 +8,11 @@
 
 title: Jekyll4Research
 
-baseurl: ""
+baseurl: "/jekyll4research"
 url: ""
 
-blogurl: "/blog/"
-tagsurl: "/tags/"
+blogurl: "/blog"
+tagsurl: "/tags"
 
 copyright: "(c) 2018 Jekyll4Research"
 
