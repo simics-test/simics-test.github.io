@@ -1,0 +1,35 @@
+# Jekyll4Research is Jekyll template for researcher.
+
+# This config file is used for site settings.
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.profile.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Jekyll4Research
+
+baseurl: ""
+url: ""
+
+blogurl: "/blog/"
+tagsurl: "/tags/"
+
+copyright: "(c) 2018 Jekyll4Research"
+
+profile:
+  name: 山田浩史
+  name_en: Hiroshi Yamada
+  # Changing "@"" to "[at]"" is recommended for the prevention of spam mail.
+  email: email[at]example.com
+  picture: assets/images/profile.jpg
+  reserch_area: Human-Computer Interaction
+  affiliation: Ruby大学 工学研究科 知能情報学専攻 Jekyll研究室 博士課程後期課程2年
+  twitter_username: TwitterJP
+  github_username: github
+
+# Build settings
+# If you show the excerpts of your posts in top page, please set "show_excerpts: true".
+show_excerpts: true
+markdown: kramdown
+plugins:
+  - jekyll-feed

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% include posts-variables.html %}
+
+<div class="container">
+  <div class="container">
+    <a href="{{ site.url | append: site.blogurl }}">月別</a> | タグ
+  </div>
+  <div class="columns">
+    <div class="column">
+      <div class="box">
+{% for tag in tags %}
+        <div class="is-size-4" id="{{tag}}">{{tag}}</div>
+        <ul class="list-marker-none">
+          {% for post in site.posts %}
+            {% for ptag in post.tags %}
+              {% if ptag == tag %}
+                <li>
+                  <a href="{{ site.baseurl | append: post.url }}">{{post.title | escape}}</a>
+                  <span class="tag tag-light">{{post.date | date: "%Y/%m/%d"}}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="column is-one-third">
+      {% include tag-window.html %}
+    </div>
+  </div>
+</div>

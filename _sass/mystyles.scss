@@ -1,0 +1,22 @@
+// Bulma settings
+@import "sass/utilities/initial-variables";
+@import "sass/utilities/functions";
+@import "sass/utilities/derived-variables";
+@import "sass/utilities/mixins.sass";
+@import "sass/base/generic";
+
+// If you customize Bulma, please reffer to https://bulma.io/documentation/overview/customize/
+// Bulma variables: https://bulma.io/documentation/overview/variables/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+$family-sans-serif: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "游ゴシック体", "Yu Gothic", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$family-primary: $family-sans-serif;
+
+$body-line-height: 1.7;
+
+$column-gap: 1.5rem;
+
+@import "bulma";
+
+// User settings
+@import "usercss";

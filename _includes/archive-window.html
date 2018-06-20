@@ -1,0 +1,14 @@
+<div class="box is-hidden-mobile">
+  <div class="is-size-6">
+    月別アーカイブ
+  </div>
+  <div>
+    {% for dateid in dateids %}
+      {% assign y_m = dateid | split: "-" %}
+      {% assign jumpto = site.url | append: site.blogurl | append: "#" | append: dateid %}
+      <div>
+        <a href="{{jumpto}}">{{y_m[0] | escape}}年{{y_m[1] | escape}}月({{ids_counter[forloop.index0] | escape}})</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

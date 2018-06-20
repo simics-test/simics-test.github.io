@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% include posts-variables.html %}
+
+<div class="container">
+  <div class="container">
+    <a href="{{ site.url | append: site.blogurl }}">月別</a> | <a href="{{ site.url | append: site.tagsurl }}">タグ</a>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <div class="box">
+        <div class="has-text-grey-light">
+          {{page.date | date: "%Y-%m-%d"}}
+        </div>
+        <div class="is-size-4">
+          {{page.title | escape}}
+        </div>
+        {% if page.tags %}
+          <div>
+            {% for tag in page.tags %}
+              {% assign jumpto = site.url | append: site.tagsurl | append: "#" | append: tag %}
+              <a href="{{jumpto}}" class="tag is-light">{{tag | escape}}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <hr>
+        <div>
+          {{content}}
+        </div>
+        <hr>
+        <div class="columns is-mobile">
+          <div class="column has-text-left is-size-7 p-r-none">
+            {% if page.previous %}
+              {% assign title_size = page.previous.title | size %}
+              {% assign title = "" %}
+              {% if title_size > 8 %}
+                {% assign title = page.previous.title | slice: 0, 8 | append: "..."%}
+              {% else %}
+                {% assign title = page.previous.title %}
+              {% endif %}
+            &lt;&lt; <a href="{{ site.url | append: page.previous.url }}">{{ title | escape }}</a>
+            {% endif %}
+          </div>
+          <div class="column has-text-right is-size-7 p-l-none">
+            {% if page.next %}
+              {% assign title_size = page.next.title | size %}
+              {% assign title = "" %}
+              {% if title_size > 8 %}
+                {% assign title = page.next.title | slice: 0, 8 | append: "..."%}
+              {% else %}
+                {% assign title = page.next.title %}
+              {% endif %}
+              <a href="{{ site.url | append: page.next.url }}">{{ title | escape }}</a>&gt;&gt;
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      {% include recent-post.html %}
+      {% include archive-window.html %}
+      {% include tag-window.html %}
+    </div>
+  </div>
+</div>

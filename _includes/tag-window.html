@@ -1,0 +1,11 @@
+<div class="box is-hidden-mobile">
+  <div class="is-size-6">
+    タグ
+  </div>
+  <div>
+    {% for tag in tags %}
+      {% assign jumpto = site.url | append: site.tagsurl | append: "#" | append: tag %}
+        <a class="tag is-light" href="{{jumpto}}">{{tag | escape}}</a>
+    {% endfor %}
+  </div>
+</div>
