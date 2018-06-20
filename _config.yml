@@ -9,7 +9,7 @@
 title: Jekyll4Research
 
 baseurl: "/jekyll4research"
-url: ""
+url: "https://simics-ja.github.io/jekyll4research"
 
 blogurl: "/blog"
 tagsurl: "/tags"

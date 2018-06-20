@@ -4,7 +4,7 @@
   </div>
   <div>
     {% for tag in tags %}
-      {% assign jumpto = site.url | append: site.tagsurl | append: "#" | append: tag %}
+      {% assign jumpto = site.tagsurl | append: "#" | append: tag | relative_url %}
         <a class="tag is-light" href="{{jumpto}}">{{tag | escape}}</a>
     {% endfor %}
   </div>

@@ -5,7 +5,7 @@ layout: default
 
 <div class="container">
   <div class="container">
-    月別 | <a href="{{ site.url | append: site.tagsurl }}">タグ</a>
+    月別 | <a href="{{ site.tagsurl | relative_url }}">タグ</a>
   </div>
   <div class="columns">
     <div class="column">
@@ -21,7 +21,7 @@ layout: default
     
           {% if y_m[0] == pyear and y_m[1] == pmonth %}
             <li>
-              <a href="{{ site.baseurl | append: post.url }}">{{post.title}}</a>
+              <a href="{{ post.url | relative_url }}">{{post.title}}</a>
               <span class="tag tag-lighter">{{post.date | date: "%Y/%m/%d"}}</span>
             </li>
           {% endif %}
