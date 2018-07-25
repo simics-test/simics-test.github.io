@@ -8,8 +8,7 @@
 
 title: Jekyll4Research
 
-baseurl: "/jekyll4research"
-url: "https://simics-ja.github.io/jekyll4research"
+url: "https://simics-test.github.io/"
 
 blogurl: "/blog"
 tagsurl: "/tags"
